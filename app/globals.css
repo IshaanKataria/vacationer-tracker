@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --bg: #eef1f5;
+  --surface: #ffffff;
+  --surface-2: #f6f8fb;
+  --ink: #141b26;
+  --muted: #57626f;
+  --faint: #8794a3;
+  --line: #dde3eb;
+  --accent: #2a4cc4;
+  --accent-soft: #e7ecfb;
+  --urgent: #c4342b;
+  --urgent-soft: #fbe7e4;
+  --good: #147a4e;
+  --good-soft: #e1f2e9;
+  --warn: #a9670a;
+  --warn-soft: #faefd9;
+  --idle: #6e7a88;
+  --idle-soft: #eaeef2;
+  --shadow: 0 1px 2px rgba(20, 27, 38, 0.05), 0 6px 20px rgba(20, 27, 38, 0.05);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #0f141b;
+    --surface: #161d27;
+    --surface-2: #1b232f;
+    --ink: #eaeef4;
+    --muted: #9aa6b4;
+    --faint: #6b7684;
+    --line: #273140;
+    --accent: #8aa0f2;
+    --accent-soft: #1e2a47;
+    --urgent: #f0776e;
+    --urgent-soft: #331a17;
+    --good: #57c48d;
+    --good-soft: #14301f;
+    --warn: #e0a752;
+    --warn-soft: #33260f;
+    --idle: #8894a2;
+    --idle-soft: #222a34;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.35);
   }
 }
 
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-urgent: var(--urgent);
+  --color-urgent-soft: var(--urgent-soft);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-idle: var(--idle);
+  --color-idle-soft: var(--idle-soft);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card-shadow {
+  box-shadow: var(--shadow);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
 }

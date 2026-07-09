@@ -1,0 +1,42 @@
+name: weekly data refresh
+
+on:
+  schedule:
+    # Tuesdays 19:47 UTC = Wednesday ~6:47am AEST (off-peak minute — GitHub
+    # delays jobs scheduled at the top of the hour)
+    - cron: "47 19 * * 2"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: run AI research refresh
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/refresh.mjs
+
+      - name: open PR with changes
+        uses: peter-evans/create-pull-request@v8
+        with:
+          branch: data-refresh
+          title: "chore: weekly program data refresh"
+          commit-message: "chore: weekly program data refresh"
+          body: |
+            Automated weekly research pass over data/programs.json — statuses
+            re-verified against official careers pages, expired deadlines
+            closed, newly opened programs added.
+
+            Review the diff before merging: check any new applyUrl resolves
+            and dates look sane. Merging auto-deploys via Vercel.
+          delete-branch: true

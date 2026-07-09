@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Vacationer — AU Summer Internship and Vacationer Program Tracker
 
-## Getting Started
+A curated tracker of Australian summer vacationer and internship programs (Big 4, banks, quant trading, tech, consulting) for penultimate-year students. No employer pays to be listed, no login wall, sorted by what closes next.
 
-First, run the development server:
+What it does
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Every program shows live status (open, rolling, opening soon, closed), deadline with a day counter, locations, work-rights eligibility, and a direct apply link
+- Work-rights badges answer the most-asked question in AU recruiting up front: citizen/PR only, visa-friendly, sponsors visa, or role-dependent
+- Track your own pipeline per program (saved, applied, online assessment, interview/AC, offer, rejected) — stored in localStorage, no account
+- Add any deadline to your calendar as an .ics with a 2-day reminder
+- Filter by sector, status, work rights, Melbourne-only, or your own list
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 16 (App Router, static render) + Tailwind v4, deployed on Vercel
+- Data lives in data/programs.json — git is the database and the changelog
+- Vercel Web Analytics for traffic
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+How the data stays fresh
 
-## Learn More
+A weekly GitHub Action (.github/workflows/refresh.yml) runs scripts/refresh.mjs, which asks Claude (with server-side web search) to re-verify every listing against official careers pages, close expired deadlines, and add newly opened programs. The script validates the result against the schema and the Action opens a PR — a human reviews the diff before merge, and merging auto-deploys.
 
-To learn more about Next.js, take a look at the following resources:
+Setup for the refresh pipeline
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Add an ANTHROPIC_API_KEY secret: repo Settings, Secrets and variables, Actions
+- Enable "Allow GitHub Actions to create and approve pull requests": repo Settings, Actions, General
+- Run it on demand from the Actions tab (workflow_dispatch), or wait for Tuesday's scheduled run
+- Note: GitHub disables scheduled workflows after 60 days without repo activity — merging the weekly PR keeps it alive
+- Cost: roughly 20-30 cents per run (web search is billed at 10 USD per 1,000 searches plus tokens)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Local dev
 
-## Deploy on Vercel
+- npm install
+- npm run dev
+- Refresh script locally: ANTHROPIC_API_KEY=... node scripts/refresh.mjs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Spotted a wrong date or a missing program? Open an issue with the program name, the official careers URL, and what needs to change. Corrections are cross-checked against the official page before merging.
+
+Disclaimer
+
+Deadlines and eligibility rules change quickly and some programs close early once filled. Always confirm on the employer's official page before planning around anything listed here.
