@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   CATEGORY_LABELS,
   PIPELINE_STAGES,
@@ -247,7 +247,10 @@ function DetailPanel({
   }
 
   function onApplyClick() {
-    if (stage === "none" || stage === "saved") setStage(p.id, "applied");
+    const s = effectiveStatus(p, today);
+    const applyable = s === "open" || s === "rolling";
+    if (applyable && (stage === "none" || stage === "saved"))
+      setStage(p.id, "applied");
   }
 
   return (
@@ -382,7 +385,9 @@ export default function Tracker({
   const [melbOnly, setMelbOnly] = useState(false);
   const [mineOnly, setMineOnly] = useState(false);
   const { progress, setStage } = useProgress();
-  const urlReady = useRef(false);
+  // Flips to true one render AFTER the URL params have been applied, so the
+  // selection-fallback effect can't clobber a deep-linked job.
+  const [urlReady, setUrlReady] = useState(false);
 
   useEffect(() => {
     const now = new Date();
@@ -398,18 +403,18 @@ export default function Tracker({
     } else if (type === "graduate" || type === "internship") {
       setRoleTab(type);
     }
-    urlReady.current = true;
+    setUrlReady(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
-    if (!urlReady.current) return;
+    if (!urlReady) return;
     const url = new URL(window.location.href);
     url.searchParams.set("type", roleTab);
     if (selectedId) url.searchParams.set("job", selectedId);
     else url.searchParams.delete("job");
     window.history.replaceState(null, "", url.toString());
-  }, [roleTab, selectedId]);
+  }, [roleTab, selectedId, urlReady]);
 
   const tabPrograms = useMemo(
     () => programs.filter((p) => p.roleType === roleTab),
@@ -445,12 +450,12 @@ export default function Tracker({
 
   // Keep a valid selection: fall back to the top of the current list.
   useEffect(() => {
-    if (!urlReady.current) return;
+    if (!urlReady) return;
     if (!filtered.some((p) => p.id === selectedId)) {
       setSelectedId(filtered[0]?.id ?? null);
       setMobileDetail(false);
     }
-  }, [filtered, selectedId]);
+  }, [filtered, selectedId, urlReady]);
 
   const selected = filtered.find((p) => p.id === selectedId) ?? filtered[0];
 
