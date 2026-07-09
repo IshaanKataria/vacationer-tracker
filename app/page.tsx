@@ -7,21 +7,18 @@ const programs = data.programs as unknown as Program[];
 export default function Home() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-8 sm:pt-14">
-      <header className="mb-8 border-b border-line pb-7">
-        <p className="mb-3 font-mono text-[12px] font-semibold uppercase tracking-[0.14em] text-accent">
-          Summer 2026/27 · Australia
-        </p>
-        <h1 className="mb-3 font-display text-4xl font-bold tracking-tight sm:text-5xl [text-wrap:balance]">
-          Vacationer
-        </h1>
-        <p className="max-w-[62ch] text-[15.5px] leading-relaxed text-muted sm:text-[17px]">
-          Every Big&nbsp;4, bank, quant and tech vacationer program worth
-          applying to — live status, deadlines and direct apply links, curated
-          for penultimate-year students.{" "}
-          <strong className="font-semibold text-ink">
-            No employer pays to be here. No login wall. Sorted by what closes
-            next.
-          </strong>
+      <header className="mb-6 flex flex-wrap items-end justify-between gap-x-6 gap-y-2 border-b border-line pb-5">
+        <div>
+          <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+            Vacationer
+          </h1>
+          <p className="mt-1 text-[13.5px] text-muted">
+            Curated AU internships &amp; grad roles for students in finance,
+            consulting, quant and tech.
+          </p>
+        </div>
+        <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-accent">
+          No sponsored listings · no login wall · sorted by what closes next
         </p>
       </header>
 
