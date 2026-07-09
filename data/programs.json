@@ -5,11 +5,15 @@
       "id": "macquarie-melb-2627",
       "firm": "Macquarie Group",
       "program": "Summer Internship — Melbourne & Perth (finance / business)",
+      "roleType": "internship",
       "category": "bank",
       "status": "open",
       "deadline": "2026-07-21",
       "deadlineNote": "12pm AEST",
-      "locations": ["Melbourne", "Perth"],
+      "locations": [
+        "Melbourne",
+        "Perth"
+      ],
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://recruitment.macquarie.com/en_US/careers/JobDetail/2026-2027-Macquarie-Summer-Internship-Melbourne-and-Perth/22003",
@@ -20,10 +24,15 @@
       "id": "deloitte-vac-2627",
       "firm": "Deloitte",
       "program": "Vacationer Program (Summer Vacation Program)",
+      "roleType": "internship",
       "category": "big4",
       "status": "open",
       "deadline": "2026-07-22",
-      "locations": ["Melbourne", "Sydney", "National"],
+      "locations": [
+        "Melbourne",
+        "Sydney",
+        "National"
+      ],
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://www.deloitte.com/au/en/careers/students/summer-vacation-program-careers.html",
@@ -34,11 +43,14 @@
       "id": "cba-gmsa-2627",
       "firm": "CommBank",
       "program": "Global Markets Summer Analyst (Sydney)",
+      "roleType": "internship",
       "category": "bank",
       "status": "open",
       "deadline": "2026-07-13",
       "deadlineNote": "11:55pm AEST",
-      "locations": ["Sydney"],
+      "locations": [
+        "Sydney"
+      ],
       "melbourne": false,
       "workRights": "citizen-pr",
       "applyUrl": "https://cba.wd3.myworkdayjobs.com/CommBank_Careers/job/Sydney-CBD-Area/XMLNAME-2026-27-CommBank-Global-Markets-Summer-Analyst-Campaign_REQ260433-1",
@@ -49,11 +61,15 @@
       "id": "macquarie-syd-tech-2627",
       "firm": "Macquarie Group",
       "program": "Summer Internship — Technology (Sydney) + Sydney & Brisbane business",
+      "roleType": "internship",
       "category": "bank",
       "status": "open",
       "deadline": "2026-08-04",
       "deadlineNote": "12pm AEST",
-      "locations": ["Sydney", "Brisbane"],
+      "locations": [
+        "Sydney",
+        "Brisbane"
+      ],
       "melbourne": false,
       "workRights": "citizen-pr",
       "applyUrl": "https://recruitment.macquarie.com/en_US/careers/JobDetail/2026-2027-Macquarie-Summer-Internship-Technology-Sydney/21982",
@@ -64,11 +80,17 @@
       "id": "nab-summer-2627",
       "firm": "NAB",
       "program": "Summer Intern Program — Digital, Data & AI (Melbourne)",
+      "roleType": "internship",
       "category": "bank",
       "status": "open",
       "deadline": "2026-08-09",
       "deadlineNote": "11:59pm AEST",
-      "locations": ["Melbourne", "Sydney", "Perth", "Brisbane"],
+      "locations": [
+        "Melbourne",
+        "Sydney",
+        "Perth",
+        "Brisbane"
+      ],
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.nab.com.au/about-us/careers/early-careers/summer-intern-program",
@@ -79,9 +101,12 @@
       "id": "anz-tech-2627",
       "firm": "ANZ",
       "program": "Technology Summer Intern Program (Melbourne)",
+      "roleType": "internship",
       "category": "bank",
       "status": "rolling",
-      "locations": ["Melbourne"],
+      "locations": [
+        "Melbourne"
+      ],
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://careers.anz.com/job/Melbourne-202627-AU-Technology-Summer-Intern-program/1362774566/",
@@ -92,9 +117,14 @@
       "id": "anz-inst-2627",
       "firm": "ANZ",
       "program": "Institutional Summer Intern Program",
+      "roleType": "internship",
       "category": "bank",
       "status": "rolling",
-      "locations": ["Melbourne", "Sydney", "Brisbane"],
+      "locations": [
+        "Melbourne",
+        "Sydney",
+        "Brisbane"
+      ],
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://careers.anz.com/job/Melb%2C-Syd%2C-Bris-202627-AU-Institutional-Summer-Intern-program/1362775466/",
@@ -105,9 +135,14 @@
       "id": "kpmg-vac-2627",
       "firm": "KPMG",
       "program": "Vacationer Program — rolling intake",
+      "roleType": "internship",
       "category": "big4",
       "status": "rolling",
-      "locations": ["Melbourne", "Sydney", "National"],
+      "locations": [
+        "Melbourne",
+        "Sydney",
+        "National"
+      ],
       "melbourne": true,
       "workRights": "visa-friendly",
       "applyUrl": "https://kpmg.com/au/en/careers/graduates/vacation-program.html",
@@ -118,9 +153,14 @@
       "id": "ey-vac-2627",
       "firm": "EY",
       "program": "2026/27 Vacationer Program (Melbourne / Naarm)",
+      "roleType": "internship",
       "category": "big4",
       "status": "rolling",
-      "locations": ["Melbourne", "Sydney", "National"],
+      "locations": [
+        "Melbourne",
+        "Sydney",
+        "National"
+      ],
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.ey.com/en_au/careers/2026-27-vacationer-program-student-opportunities",
@@ -131,9 +171,13 @@
       "id": "canva-intern-2627",
       "firm": "Canva",
       "program": "Internship Program (12-week summer)",
+      "roleType": "internship",
       "category": "tech",
       "status": "rolling",
-      "locations": ["Sydney", "Australia-wide"],
+      "locations": [
+        "Sydney",
+        "Australia-wide"
+      ],
       "melbourne": false,
       "workRights": "visa-friendly",
       "applyUrl": "https://www.lifeatcanva.com/en/early-careers/",
@@ -144,9 +188,12 @@
       "id": "amazon-sde-2026",
       "firm": "Amazon",
       "program": "2026 Software Dev Engineer Intern (Sydney)",
+      "roleType": "internship",
       "category": "tech",
       "status": "rolling",
-      "locations": ["Sydney"],
+      "locations": [
+        "Sydney"
+      ],
       "melbourne": false,
       "workRights": "visa-friendly",
       "applyUrl": "https://www.amazon.jobs/en/jobs/3204846/2026-software-dev-engineer-intern-location-sydney",
@@ -157,9 +204,13 @@
       "id": "sig-qt-2627",
       "firm": "Susquehanna (SIG)",
       "program": "Quant Trader Internship (Sydney-based → Hong Kong) + Grad QT 2027",
+      "roleType": "internship",
       "category": "quant",
       "status": "rolling",
-      "locations": ["Sydney", "Hong Kong"],
+      "locations": [
+        "Sydney",
+        "Hong Kong"
+      ],
       "melbourne": false,
       "workRights": "sponsors-visa",
       "applyUrl": "https://careers.sig.com/apac/jobs",
@@ -170,9 +221,12 @@
       "id": "janestreet-hk-2027",
       "firm": "Jane Street",
       "program": "Hong Kong Internships — Summer 2027 (Quant Trader / SWE)",
+      "roleType": "internship",
       "category": "quant",
       "status": "rolling",
-      "locations": ["Hong Kong"],
+      "locations": [
+        "Hong Kong"
+      ],
       "melbourne": false,
       "workRights": "sponsors-visa",
       "applyUrl": "https://www.janestreet.com/join-jane-street/open-roles/",
@@ -183,9 +237,12 @@
       "id": "citadel-sec-eoi-2627",
       "firm": "Citadel Securities",
       "program": "Intern — Expression of Interest (Australia)",
+      "roleType": "internship",
       "category": "quant",
       "status": "rolling",
-      "locations": ["Sydney"],
+      "locations": [
+        "Sydney"
+      ],
       "melbourne": false,
       "workRights": "role-dependent",
       "applyUrl": "https://www.citadelsecurities.com/careers/details/expression-of-interest-intern-australia/",
@@ -196,10 +253,13 @@
       "id": "optiver-syd-2027",
       "firm": "Optiver",
       "program": "Sydney Internships (Quant Trading / SWE / Research) — Talent Community",
+      "roleType": "internship",
       "category": "quant",
       "status": "rolling",
       "opensNote": "formal reqs ~Aug 2026",
-      "locations": ["Sydney"],
+      "locations": [
+        "Sydney"
+      ],
       "melbourne": false,
       "workRights": "visa-friendly",
       "applyUrl": "https://optiver.com/working-at-optiver/internships/",
@@ -210,11 +270,15 @@
       "id": "westpac-summer-2627",
       "firm": "Westpac",
       "program": "Group Summer Internship Program",
+      "roleType": "internship",
       "category": "bank",
       "status": "soon",
       "opens": "2026-07-13",
       "opensNote": "12pm AEST",
-      "locations": ["Sydney", "Melbourne (CIB)"],
+      "locations": [
+        "Sydney",
+        "Melbourne (CIB)"
+      ],
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.westpac.com.au/about-westpac/careers/pathways/grad-program/summer-intern/",
@@ -225,10 +289,14 @@
       "id": "cba-summer-2627",
       "firm": "CommBank",
       "program": "Summer Intern Program (10-week)",
+      "roleType": "internship",
       "category": "bank",
       "status": "soon",
       "opensNote": "July–August 2026",
-      "locations": ["Sydney", "Melbourne (tech)"],
+      "locations": [
+        "Sydney",
+        "Melbourne (tech)"
+      ],
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.commbank.com.au/about-us/careers/graduate-intern-programs.html",
@@ -239,10 +307,13 @@
       "id": "microsoft-aspire-2027",
       "firm": "Microsoft",
       "program": "Aspire / early-careers intern season",
+      "roleType": "internship",
       "category": "tech",
       "status": "soon",
       "opensNote": "Aug–Oct 2026",
-      "locations": ["Sydney"],
+      "locations": [
+        "Sydney"
+      ],
       "melbourne": false,
       "workRights": "role-dependent",
       "applyUrl": "https://careers.microsoft.com/students/",
@@ -253,10 +324,13 @@
       "id": "akuna-2027",
       "firm": "Akuna Capital",
       "program": "Akunacademy Internship (Sydney)",
+      "roleType": "internship",
       "category": "quant",
       "status": "soon",
       "opensNote": "Aug–Sep 2026",
-      "locations": ["Sydney"],
+      "locations": [
+        "Sydney"
+      ],
       "melbourne": false,
       "workRights": "role-dependent",
       "applyUrl": "https://akunacapital.com/work-with-us/internships/",
@@ -267,10 +341,14 @@
       "id": "rea-summer-2627",
       "firm": "REA Group",
       "program": "Summer Internship Program (Melbourne HQ)",
+      "roleType": "internship",
       "category": "tech",
       "status": "soon",
       "opensNote": "between cycles — set alert",
-      "locations": ["Melbourne", "Perth"],
+      "locations": [
+        "Melbourne",
+        "Perth"
+      ],
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://au.gradconnection.com/employers/rea-group/",
@@ -281,10 +359,14 @@
       "id": "accenture-2627",
       "firm": "Accenture",
       "program": "Internships / early-careers (Melbourne)",
+      "roleType": "internship",
       "category": "consulting",
       "status": "soon",
       "opensNote": "September intake likely",
-      "locations": ["Melbourne", "Sydney"],
+      "locations": [
+        "Melbourne",
+        "Sydney"
+      ],
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://au.gradconnection.com/employers/accenture/",
@@ -295,10 +377,14 @@
       "id": "kearney-anz-2627",
       "firm": "Kearney",
       "program": "Summer / Winter Internship (Sydney + Melbourne)",
+      "roleType": "internship",
       "category": "consulting",
       "status": "soon",
       "opensNote": "unconfirmed — check ANZ careers page",
-      "locations": ["Melbourne", "Sydney"],
+      "locations": [
+        "Melbourne",
+        "Sydney"
+      ],
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://www.kearney.com/about/locations/anz/careers",
@@ -309,9 +395,13 @@
       "id": "pwc-vac-2627",
       "firm": "PwC",
       "program": "Vacation Program",
+      "roleType": "internship",
       "category": "big4",
       "status": "closed",
-      "locations": ["Melbourne", "Sydney"],
+      "locations": [
+        "Melbourne",
+        "Sydney"
+      ],
       "melbourne": true,
       "workRights": "visa-friendly",
       "applyUrl": "https://jobs-au.pwc.com/au/en/vacation-program",
@@ -322,10 +412,13 @@
       "id": "imc-syd-2627",
       "firm": "IMC Trading",
       "program": "Sydney Internships (Trader / Quant Research / SWE)",
+      "roleType": "internship",
       "category": "quant",
       "status": "closed",
       "opensNote": "next cycle ~early 2027",
-      "locations": ["Sydney"],
+      "locations": [
+        "Sydney"
+      ],
       "melbourne": false,
       "workRights": "role-dependent",
       "applyUrl": "https://www.imc.com/ap/careers/students-graduates/internships",
@@ -336,10 +429,13 @@
       "id": "atlassian-swe-2026",
       "firm": "Atlassian",
       "program": "Software Engineer Intern (Sydney)",
+      "roleType": "internship",
       "category": "tech",
       "status": "closed",
       "opensNote": "reopens ~Jan",
-      "locations": ["Sydney"],
+      "locations": [
+        "Sydney"
+      ],
       "melbourne": false,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.atlassian.com/company/careers/earlycareers",
@@ -350,10 +446,13 @@
       "id": "google-au-2627",
       "firm": "Google",
       "program": "SWE / STEP Intern (Sydney)",
+      "roleType": "internship",
       "category": "tech",
       "status": "closed",
       "opensNote": "Nov 2026 intake likely closed — verify",
-      "locations": ["Sydney"],
+      "locations": [
+        "Sydney"
+      ],
       "melbourne": false,
       "workRights": "visa-friendly",
       "applyUrl": "https://au.gradconnection.com/employers/google/",
@@ -364,10 +463,14 @@
       "id": "mckinsey-ba-2027",
       "firm": "McKinsey",
       "program": "Business Analyst (ANZ)",
+      "roleType": "graduate",
       "category": "consulting",
       "status": "closed",
       "opensNote": "reopens ~Jan 2027",
-      "locations": ["Melbourne", "Sydney"],
+      "locations": [
+        "Melbourne",
+        "Sydney"
+      ],
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://www.mckinsey.com/au/careers/business-analyst-recruitment",
@@ -378,9 +481,15 @@
       "id": "bcg-anz-2027",
       "firm": "BCG",
       "program": "Associate / Scholarship (ANZ)",
+      "roleType": "graduate",
       "category": "consulting",
       "status": "closed",
-      "locations": ["Melbourne", "Sydney", "Perth", "Canberra"],
+      "locations": [
+        "Melbourne",
+        "Sydney",
+        "Perth",
+        "Canberra"
+      ],
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://careers.bcg.com/global/en/locations/australia-new-zealand/associate-recruitment",
@@ -391,10 +500,15 @@
       "id": "bain-aci-2027",
       "firm": "Bain & Company",
       "program": "Associate Consultant Intern (ANZ)",
+      "roleType": "internship",
       "category": "consulting",
       "status": "closed",
       "opensNote": "~31 Aug 2026 global ACI deadline — verify AU applicability",
-      "locations": ["Melbourne", "Sydney", "Perth"],
+      "locations": [
+        "Melbourne",
+        "Sydney",
+        "Perth"
+      ],
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://www.bain.com/careers/work-with-us/internships-programs/associate-consultant-internship/",
@@ -405,13 +519,119 @@
       "id": "vivcourt-2627",
       "firm": "VivCourt",
       "program": "Summer Trading Internship (Sydney)",
+      "roleType": "internship",
       "category": "quant",
       "status": "closed",
-      "locations": ["Sydney"],
+      "locations": [
+        "Sydney"
+      ],
       "melbourne": false,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.vivcourt.com/careers/trading-internship/",
       "notes": "Closed — join the VivTalent community. AU/NZ citizen or PR only; no visa holders.",
+      "verified": "2026-07-10"
+    },
+    {
+      "id": "optiver-grad-qt-2027",
+      "firm": "Optiver",
+      "program": "Graduate Quantitative Trader 2027 — Expression of Interest (Sydney)",
+      "roleType": "graduate",
+      "category": "quant",
+      "status": "rolling",
+      "locations": [
+        "Sydney"
+      ],
+      "melbourne": false,
+      "workRights": "visa-friendly",
+      "applyUrl": "https://www.optiver.com/join-us/jobs/institutional-sales-and-trading/sydney/expressions-of-interest-graduate-quantitative-trader-2027/",
+      "notes": "Formal graduate applications are currently closed — the EOI is open and Optiver contacts registrants when the campaign opens. Accepts full AU working rights.",
+      "verified": "2026-07-10"
+    },
+    {
+      "id": "sig-grad-qt-2027",
+      "firm": "Susquehanna (SIG)",
+      "program": "Graduate Quantitative Trader 2027 (Sydney)",
+      "roleType": "graduate",
+      "category": "quant",
+      "status": "rolling",
+      "locations": [
+        "Sydney"
+      ],
+      "melbourne": false,
+      "workRights": "role-dependent",
+      "applyUrl": "https://careers.sig.com/apac/jobs",
+      "notes": "Live on the APAC jobs board, reviewed rolling. Reach it via the board search — direct job deep-links do not resolve.",
+      "verified": "2026-07-10"
+    },
+    {
+      "id": "cba-tech-associate-2026",
+      "firm": "CommBank",
+      "program": "Technology Associate Program (traineeship)",
+      "roleType": "graduate",
+      "category": "bank",
+      "status": "open",
+      "locations": [
+        "Sydney"
+      ],
+      "melbourne": false,
+      "workRights": "citizen-pr",
+      "applyUrl": "https://cba.wd3.myworkdayjobs.com/Private_Ad/job/Sydney-CBD-Area/Technology-Associate-Program--Traineeship-_REQ260472-2",
+      "notes": "12-18 month technology traineeship, separate from the Summer Intern Program. Listing was live with no published close date — apply early.",
+      "verified": "2026-07-10"
+    },
+    {
+      "id": "westpac-grad-2027",
+      "firm": "Westpac",
+      "program": "2027 Graduate Program",
+      "roleType": "graduate",
+      "category": "bank",
+      "status": "soon",
+      "opens": "2026-07-13",
+      "opensNote": "12pm AEST",
+      "locations": [
+        "Sydney",
+        "Melbourne"
+      ],
+      "melbourne": true,
+      "workRights": "citizen-pr",
+      "applyUrl": "https://www.westpac.com.au/about-westpac/careers/pathways/grad-program/",
+      "notes": "Opens the same day as the Summer Internship. Includes a Technology stream in the graduate intake — verify stream locations when applications open.",
+      "verified": "2026-07-10"
+    },
+    {
+      "id": "canva-launchpad-2027",
+      "firm": "Canva",
+      "program": "Launchpad Graduate Program",
+      "roleType": "graduate",
+      "category": "tech",
+      "status": "soon",
+      "opensNote": "expected mid-late Jul 2026",
+      "locations": [
+        "Sydney",
+        "Australia-wide"
+      ],
+      "melbourne": false,
+      "workRights": "visa-friendly",
+      "applyUrl": "https://www.lifeatcanva.com/en/early-careers/",
+      "notes": "Final-year focus. Was on expressions-of-interest with opening flagged as weeks away — watch the early-careers page.",
+      "verified": "2026-07-10"
+    },
+    {
+      "id": "telstra-grad-2027",
+      "firm": "Telstra",
+      "program": "2027 Graduate Program",
+      "roleType": "graduate",
+      "category": "tech",
+      "status": "closed",
+      "opensNote": "next cycle ~early 2027",
+      "locations": [
+        "Melbourne",
+        "National"
+      ],
+      "melbourne": true,
+      "workRights": "role-dependent",
+      "applyUrl": "https://www.telstra.com.au/careers/students-and-graduates",
+      "notes": "Closed 31 Mar 2026. Accepts citizens, PR holders, and international students with an unrestricted work visa. Melbourne HQ — watch the next cycle.",
       "verified": "2026-07-10"
     }
   ]

@@ -1,5 +1,7 @@
 export type Category = "big4" | "bank" | "quant" | "tech" | "consulting";
 
+export type RoleType = "internship" | "graduate";
+
 export type Status = "open" | "rolling" | "soon" | "closed";
 
 export type WorkRights =
@@ -12,6 +14,7 @@ export interface Program {
   id: string;
   firm: string;
   program: string;
+  roleType: RoleType;
   category: Category;
   status: Status;
   /** ISO date of a hard close deadline, if one exists */
@@ -49,6 +52,11 @@ export const PIPELINE_STAGES: { value: PipelineStage; label: string }[] = [
   { value: "offer", label: "Offer" },
   { value: "rejected", label: "Rejected" },
 ];
+
+export const ROLE_TYPE_LABELS: Record<RoleType, string> = {
+  internship: "Internships",
+  graduate: "Graduate roles",
+};
 
 export const CATEGORY_LABELS: Record<Category, string> = {
   big4: "Big 4",

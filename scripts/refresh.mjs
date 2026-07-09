@@ -21,6 +21,7 @@ if (!API_KEY) {
 const MODEL = process.env.MODEL || "claude-opus-4-8";
 
 const CATEGORIES = ["big4", "bank", "quant", "tech", "consulting"];
+const ROLE_TYPES = ["internship", "graduate"];
 const STATUSES = ["open", "rolling", "soon", "closed"];
 const WORK_RIGHTS = ["citizen-pr", "visa-friendly", "sponsors-visa", "role-dependent"];
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -28,7 +29,7 @@ const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 const current = readFileSync(DATA_PATH, "utf8");
 const today = new Date().toISOString().slice(0, 10);
 
-const prompt = `You maintain the dataset behind a curated tracker of Australian summer vacationer/internship programs (Big 4, banks, quant trading firms, tech, consulting) for penultimate-year university students. Today is ${today}.
+const prompt = `You maintain the dataset behind a curated tracker of Australian early-career programs (Big 4, banks, quant trading firms, tech, consulting) for university students. It covers TWO role types: summer vacationer/internship programs (penultimate-year) AND graduate programs (final-year/recent grads). Today is ${today}.
 
 Here is the current dataset:
 
@@ -40,10 +41,11 @@ Your job, using web search against OFFICIAL employer careers pages (cross-check 
 
 1. VERIFY every program whose status could plausibly have changed (open/rolling/soon entries, and any closed entry whose next cycle may have opened). Update status, deadline, opens/opensNote and notes to match reality. Set "verified" to ${today} on every entry you actually checked. Leave entries you could not verify untouched (keep their old verified date).
 2. If a hard deadline has passed, set the entry's status to "closed".
-3. HUNT for newly opened programs that fit the niche (AU summer vacationer/intern programs in finance, consulting, quant trading, or tech, relevant to Melbourne/Sydney students) that are NOT in the dataset, and add them. Follow the existing schema exactly. Use a kebab-case id ending in the cycle year. Only add programs you verified on an official page, with the direct application URL.
+3. HUNT for newly opened programs that fit the niche (AU summer vacationer/intern programs AND graduate programs in finance, consulting, quant trading, or tech, relevant to Melbourne/Sydney students) that are NOT in the dataset, and add them with the correct roleType. Follow the existing schema exactly. Use a kebab-case id ending in the cycle year. Only add programs you verified on an official page, with the direct application URL.
 4. NEVER invent dates or URLs. If a date is unknown, omit the field and explain in opensNote/notes. Set top-level "lastUpdated" to ${today}.
 
 Rules for fields:
+- roleType: one of ${ROLE_TYPES.join(", ")} (internship = vacationer/summer intern programs; graduate = grad programs, traineeships, entry-level analyst roles)
 - category: one of ${CATEGORIES.join(", ")}
 - status: one of ${STATUSES.join(", ")}
 - workRights: one of ${WORK_RIGHTS.join(", ")} (citizen-pr = AU/NZ citizenship or AU PR required; visa-friendly = student-visa holders with working rights eligible; sponsors-visa = firm sponsors relocation/work visa; role-dependent = varies by role)
@@ -130,6 +132,7 @@ for (const p of updated.programs) {
   if (!p.id || seen.has(p.id)) fail(`missing/duplicate id at ${where}`);
   seen.add(p.id);
   if (!p.firm || !p.program || !p.notes) fail(`missing text fields at ${where}`);
+  if (!ROLE_TYPES.includes(p.roleType)) fail(`bad roleType at ${where}`);
   if (!CATEGORIES.includes(p.category)) fail(`bad category at ${where}`);
   if (!STATUSES.includes(p.status)) fail(`bad status at ${where}`);
   if (!WORK_RIGHTS.includes(p.workRights)) fail(`bad workRights at ${where}`);
