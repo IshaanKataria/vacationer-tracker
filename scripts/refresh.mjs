@@ -36,14 +36,15 @@ const PRICING = {
   "claude-opus-4-8": { in: 5.0, out: 25.0 },
 };
 const WEB_SEARCH_COST = 10 / 1000;
-const cost = { inputTokens: 0, outputTokens: 0, searches: 0 };
+const cost = { in: 0, cacheRead: 0, cacheWrite: 0, out: 0, searches: 0 };
 
 // Always report cost, even if the run exits early on a validation failure.
 process.on("exit", () => {
-  if (cost.inputTokens || cost.outputTokens || cost.searches) {
+  if (cost.in || cost.cacheRead || cost.out || cost.searches) {
     console.log(
       `Run cost: ~$${estimateCost().toFixed(3)} on ${MODEL} ` +
-        `(${cost.inputTokens} in, ${cost.outputTokens} out tokens, ${cost.searches} searches)`
+        `(${cost.in} in, ${cost.cacheRead} cache-read, ${cost.cacheWrite} cache-write, ` +
+        `${cost.out} out tokens, ${cost.searches} searches)`
     );
   }
 });
@@ -89,13 +90,20 @@ async function callClaude(messages) {
   const stream = client.messages.stream({
     model: MODEL,
     max_tokens: 16000,
+    // Auto-cache the growing prefix: each pause_turn round resends the whole
+    // conversation (incl. large web-search results), so without caching those
+    // tokens are re-billed at full price every round. Caching reads them at
+    // ~0.1x, which is the difference between ~$3.50 and well under $1 per run.
+    cache_control: { type: "ephemeral" },
     messages,
-    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 20 }],
+    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 12 }],
   });
   const message = await stream.finalMessage();
   const u = message.usage || {};
-  cost.inputTokens += (u.input_tokens || 0) + (u.cache_read_input_tokens || 0) + (u.cache_creation_input_tokens || 0);
-  cost.outputTokens += u.output_tokens || 0;
+  cost.in += u.input_tokens || 0;
+  cost.cacheRead += u.cache_read_input_tokens || 0;
+  cost.cacheWrite += u.cache_creation_input_tokens || 0;
+  cost.out += u.output_tokens || 0;
   cost.searches += u.server_tool_use?.web_search_requests || 0;
   return message;
 }
@@ -103,8 +111,10 @@ async function callClaude(messages) {
 function estimateCost() {
   const p = PRICING[MODEL] || PRICING["claude-sonnet-5"];
   const usd =
-    (cost.inputTokens / 1e6) * p.in +
-    (cost.outputTokens / 1e6) * p.out +
+    (cost.in / 1e6) * p.in +
+    (cost.cacheRead / 1e6) * p.in * 0.1 +
+    (cost.cacheWrite / 1e6) * p.in * 1.25 +
+    (cost.out / 1e6) * p.out +
     cost.searches * WEB_SEARCH_COST;
   return usd;
 }
