@@ -4,7 +4,10 @@
 // programs in the site's niche, then writes the updated JSON back.
 // Zero npm dependencies — uses global fetch (Node 20+).
 //
-// Env: ANTHROPIC_API_KEY (required), MODEL (optional, default claude-opus-4-8)
+// Env: ANTHROPIC_API_KEY (required), MODEL (optional, default claude-sonnet-5).
+// Sonnet 5 is the default deliberately — it verifies + researches this dataset
+// as well as Opus at ~40% lower token cost, which matters on limited credits.
+// Set MODEL=claude-opus-4-8 if you ever want maximum quality for a run.
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -18,7 +21,28 @@ if (!API_KEY) {
   console.error("ANTHROPIC_API_KEY is not set");
   process.exit(1);
 }
-const MODEL = process.env.MODEL || "claude-opus-4-8";
+const MODEL = process.env.MODEL || "claude-sonnet-5";
+
+// Per-1M-token prices (USD), plus web search at $10 / 1000 searches. Used only
+// to print an estimated run cost — the real hard cap is the workspace spend
+// limit you set in the Anthropic Console. Standard rates (not intro) so the
+// estimate errs high.
+const PRICING = {
+  "claude-sonnet-5": { in: 3.0, out: 15.0 },
+  "claude-opus-4-8": { in: 5.0, out: 25.0 },
+};
+const WEB_SEARCH_COST = 10 / 1000;
+const cost = { inputTokens: 0, outputTokens: 0, searches: 0 };
+
+// Always report cost, even if the run exits early on a validation failure.
+process.on("exit", () => {
+  if (cost.inputTokens || cost.outputTokens || cost.searches) {
+    console.log(
+      `Run cost: ~$${estimateCost().toFixed(3)} on ${MODEL} ` +
+        `(${cost.inputTokens} in, ${cost.outputTokens} out tokens, ${cost.searches} searches)`
+    );
+  }
+});
 
 const CATEGORIES = ["big4", "bank", "quant", "tech", "consulting"];
 const ROLE_TYPES = ["internship", "graduate"];
@@ -69,9 +93,9 @@ async function callClaude(messages) {
       messages,
       tools: [
         {
-          type: "web_search_20260318",
+          type: "web_search_20260209",
           name: "web_search",
-          max_uses: 25,
+          max_uses: 20,
         },
       ],
     }),
@@ -80,7 +104,21 @@ async function callClaude(messages) {
     const body = await res.text();
     throw new Error(`API ${res.status}: ${body.slice(0, 500)}`);
   }
-  return res.json();
+  const json = await res.json();
+  const u = json.usage || {};
+  cost.inputTokens += (u.input_tokens || 0) + (u.cache_read_input_tokens || 0) + (u.cache_creation_input_tokens || 0);
+  cost.outputTokens += u.output_tokens || 0;
+  cost.searches += u.server_tool_use?.web_search_requests || 0;
+  return json;
+}
+
+function estimateCost() {
+  const p = PRICING[MODEL] || PRICING["claude-sonnet-5"];
+  const usd =
+    (cost.inputTokens / 1e6) * p.in +
+    (cost.outputTokens / 1e6) * p.out +
+    cost.searches * WEB_SEARCH_COST;
+  return usd;
 }
 
 // Run the conversation, continuing through pause_turn until the model finishes.

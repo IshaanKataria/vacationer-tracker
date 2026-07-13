@@ -26,7 +26,8 @@ Setup for the refresh pipeline
 - Enable "Allow GitHub Actions to create and approve pull requests": repo Settings, Actions, General
 - Run it on demand from the Actions tab (workflow_dispatch), or wait for Tuesday's scheduled run
 - Note: GitHub disables scheduled workflows after 60 days without repo activity — merging the weekly PR keeps it alive
-- Cost: roughly 20-30 cents per run (web search is billed at 10 USD per 1,000 searches plus tokens)
+- Cost: roughly 30-60 cents per run on Sonnet 5 (each run prints its own estimated cost; set MODEL=claude-opus-4-8 for higher quality at higher cost)
+- Hard cap: set a workspace spend limit in the Anthropic Console (Settings, Limits) so the key can never overspend regardless of run frequency
 
 Local dev
 
