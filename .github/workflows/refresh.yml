@@ -20,6 +20,10 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 22
+          cache: npm
+
+      - name: install deps
+        run: npm ci
 
       - name: run AI research refresh
         env:

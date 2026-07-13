@@ -2,7 +2,10 @@
 // Reads data/programs.json, asks Claude (with server-side web search) to
 // verify every entry and hunt for newly opened AU vacationer/internship
 // programs in the site's niche, then writes the updated JSON back.
-// Zero npm dependencies — uses global fetch (Node 20+).
+//
+// Uses the Anthropic SDK with streaming: a web-search turn can take many
+// minutes before the first byte, which trips the non-streaming HTTP timeout.
+// Streaming keeps the connection alive and returns the full message.
 //
 // Env: ANTHROPIC_API_KEY (required), MODEL (optional, default claude-sonnet-5).
 // Sonnet 5 is the default deliberately — it verifies + researches this dataset
@@ -12,6 +15,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import Anthropic from "@anthropic-ai/sdk";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const DATA_PATH = join(ROOT, "data", "programs.json");
@@ -79,37 +83,21 @@ Rules for fields:
 
 Return the COMPLETE updated JSON document (all programs, existing and new) inside a single <updated-json>...</updated-json> block. No other JSON blocks.`;
 
+const client = new Anthropic({ apiKey: API_KEY });
+
 async function callClaude(messages) {
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "x-api-key": API_KEY,
-      "anthropic-version": "2023-06-01",
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 32000,
-      messages,
-      tools: [
-        {
-          type: "web_search_20260209",
-          name: "web_search",
-          max_uses: 20,
-        },
-      ],
-    }),
+  const stream = client.messages.stream({
+    model: MODEL,
+    max_tokens: 16000,
+    messages,
+    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 20 }],
   });
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`API ${res.status}: ${body.slice(0, 500)}`);
-  }
-  const json = await res.json();
-  const u = json.usage || {};
+  const message = await stream.finalMessage();
+  const u = message.usage || {};
   cost.inputTokens += (u.input_tokens || 0) + (u.cache_read_input_tokens || 0) + (u.cache_creation_input_tokens || 0);
   cost.outputTokens += u.output_tokens || 0;
   cost.searches += u.server_tool_use?.web_search_requests || 0;
-  return json;
+  return message;
 }
 
 function estimateCost() {
