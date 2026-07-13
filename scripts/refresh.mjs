@@ -86,7 +86,7 @@ Return the COMPLETE updated JSON document (all programs, existing and new) insid
 
 const client = new Anthropic({ apiKey: API_KEY });
 
-async function callClaude(messages) {
+async function callClaude(messages, { useTools = true } = {}) {
   const stream = client.messages.stream({
     model: MODEL,
     max_tokens: 16000,
@@ -96,7 +96,9 @@ async function callClaude(messages) {
     // ~0.1x, which is the difference between ~$3.50 and well under $1 per run.
     cache_control: { type: "ephemeral" },
     messages,
-    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 12 }],
+    ...(useTools
+      ? { tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 12 }] }
+      : {}),
   });
   const message = await stream.finalMessage();
   const u = message.usage || {};
@@ -107,6 +109,12 @@ async function callClaude(messages) {
   cost.searches += u.server_tool_use?.web_search_requests || 0;
   return message;
 }
+
+const extractText = (msg) =>
+  msg.content
+    .filter((block) => block.type === "text")
+    .map((block) => block.text)
+    .join("\n");
 
 function estimateCost() {
   const p = PRICING[MODEL] || PRICING["claude-sonnet-5"];
@@ -119,20 +127,35 @@ function estimateCost() {
   return usd;
 }
 
-// Run the conversation, continuing through pause_turn until the model finishes.
+// Research phase: let the model search, continuing through pause_turn until it
+// stops on its own or we hit the round cap.
 let messages = [{ role: "user", content: prompt }];
 let response = await callClaude(messages);
 let rounds = 0;
-while (response.stop_reason === "pause_turn" && rounds < 8) {
+while (response.stop_reason === "pause_turn" && rounds < 10) {
   messages = [...messages, { role: "assistant", content: response.content }];
   response = await callClaude(messages);
   rounds++;
 }
 
-const text = response.content
-  .filter((block) => block.type === "text")
-  .map((block) => block.text)
-  .join("\n");
+let text = extractText(response);
+
+// The model sometimes keeps deferring ("continue in the next step") and never
+// emits the JSON before the round cap. Force one final tool-free synthesis turn
+// so it must output the document from what it already verified.
+if (!/<updated-json>/.test(text)) {
+  messages = [
+    ...messages,
+    { role: "assistant", content: response.content },
+    {
+      role: "user",
+      content:
+        "Stop researching now. Using everything you verified above, output the COMPLETE updated JSON document for ALL programs (existing and any new) inside a single <updated-json>...</updated-json> block. Output nothing else.",
+    },
+  ];
+  response = await callClaude(messages, { useTools: false });
+  text = extractText(response);
+}
 
 const match = text.match(/<updated-json>([\s\S]*?)<\/updated-json>/);
 if (!match) {
