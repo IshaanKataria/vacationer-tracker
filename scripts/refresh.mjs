@@ -157,17 +157,42 @@ if (!/<updated-json>/.test(text)) {
   text = extractText(response);
 }
 
-const match = text.match(/<updated-json>([\s\S]*?)<\/updated-json>/);
-if (!match) {
-  console.error("No <updated-json> block in model output. Output head:\n" + text.slice(0, 2000));
-  process.exit(1);
+// Pull the JSON out of the reply, tolerating code fences and stray prose by
+// falling back to the outermost { ... }.
+function parseUpdated(t) {
+  const m = t.match(/<updated-json>([\s\S]*?)<\/updated-json>/);
+  let raw = (m ? m[1] : t).trim();
+  raw = raw.replace(/^```(?:json)?/i, "").replace(/```$/i, "").trim();
+  const a = raw.indexOf("{");
+  const b = raw.lastIndexOf("}");
+  if (a !== -1 && b > a) raw = raw.slice(a, b + 1);
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
 }
 
-let updated;
-try {
-  updated = JSON.parse(match[1].trim());
-} catch (err) {
-  console.error("Updated JSON failed to parse: " + err.message);
+let updated = parseUpdated(text);
+
+// Self-repair: if the model emitted malformed JSON (smart quotes, a trailing
+// comma, a stray fence), ask it once to return a clean version.
+if (!updated) {
+  messages = [
+    ...messages,
+    { role: "assistant", content: response.content },
+    {
+      role: "user",
+      content:
+        "That JSON did not parse. Return ONLY the corrected, complete JSON document inside a single <updated-json>...</updated-json> block. Use straight ASCII double quotes, no code fences, no comments, no trailing commas.",
+    },
+  ];
+  response = await callClaude(messages, { useTools: false });
+  updated = parseUpdated(extractText(response));
+}
+
+if (!updated) {
+  console.error("Could not obtain valid JSON after repair. Output head:\n" + text.slice(0, 2000));
   process.exit(1);
 }
 
