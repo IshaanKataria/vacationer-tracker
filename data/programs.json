@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10",
+  "lastUpdated": "2026-08-22",
   "programs": [
     {
       "id": "macquarie-melb-2627",
@@ -7,7 +7,7 @@
       "program": "Summer Internship — Melbourne & Perth (finance / business)",
       "roleType": "internship",
       "category": "bank",
-      "status": "open",
+      "status": "closed",
       "deadline": "2026-07-21",
       "deadlineNote": "12pm AEST",
       "locations": [
@@ -17,8 +17,8 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://recruitment.macquarie.com/en_US/careers/JobDetail/2026-2027-Macquarie-Summer-Internship-Melbourne-and-Perth/22003",
-      "notes": "The only Melbourne-based Macquarie intern intake. Corporate finance, capital markets, M&A, retail banking. Interns fast-tracked into the graduate program.",
-      "verified": "2026-07-10"
+      "notes": "The only Melbourne-based Macquarie intern intake. Corporate finance, capital markets, M&A, retail banking. Interns fast-tracked into the graduate program. Applications closed 21 Jul 2026 (confirmed on official Macquarie careers page).",
+      "verified": "2026-08-22"
     },
     {
       "id": "deloitte-vac-2627",
@@ -26,7 +26,7 @@
       "program": "Vacationer Program (Summer Vacation Program)",
       "roleType": "internship",
       "category": "big4",
-      "status": "open",
+      "status": "closed",
       "deadline": "2026-07-22",
       "locations": [
         "Melbourne",
@@ -36,8 +36,8 @@
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://www.deloitte.com/au/en/careers/students/summer-vacation-program-careers.html",
-      "notes": "4–8 week paid internship, starts Nov 2026 or Jan 2027. Melbourne roles across Technology, Consulting, Audit, Tax, Data & Analytics. Dedicated international-students pathway, but work rights vary per role — check each listing.",
-      "verified": "2026-07-10"
+      "notes": "4–8 week paid internship, starts Nov 2026 or Jan 2027. Melbourne roles across Technology, Consulting, Audit, Tax, Data & Analytics. Dedicated international-students pathway, but work rights vary per role — check each listing. Applications closed 22 Jul 2026 (confirmed on official Deloitte careers page).",
+      "verified": "2026-08-22"
     },
     {
       "id": "cba-gmsa-2627",
@@ -45,7 +45,7 @@
       "program": "Global Markets Summer Analyst (Sydney)",
       "roleType": "internship",
       "category": "bank",
-      "status": "open",
+      "status": "closed",
       "deadline": "2026-07-13",
       "deadlineNote": "11:55pm AEST",
       "locations": [
@@ -54,8 +54,8 @@
       "melbourne": false,
       "workRights": "citizen-pr",
       "applyUrl": "https://cba.wd3.myworkdayjobs.com/CommBank_Careers/job/Sydney-CBD-Area/XMLNAME-2026-27-CommBank-Global-Markets-Summer-Analyst-Campaign_REQ260433-1",
-      "notes": "Markets-focused summer analyst campaign. Sydney only — separate from the main Summer Intern Program.",
-      "verified": "2026-07-10"
+      "notes": "Markets-focused summer analyst campaign. Sydney only — separate from the main Summer Intern Program. Applications closed 13 Jul 2026 per original deadline; cycle now closed.",
+      "verified": "2026-08-22"
     },
     {
       "id": "macquarie-syd-tech-2627",
@@ -63,7 +63,7 @@
       "program": "Summer Internship — Technology (Sydney) + Sydney & Brisbane business",
       "roleType": "internship",
       "category": "bank",
-      "status": "open",
+      "status": "closed",
       "deadline": "2026-08-04",
       "deadlineNote": "12pm AEST",
       "locations": [
@@ -73,8 +73,8 @@
       "melbourne": false,
       "workRights": "citizen-pr",
       "applyUrl": "https://recruitment.macquarie.com/en_US/careers/JobDetail/2026-2027-Macquarie-Summer-Internship-Technology-Sydney/21982",
-      "notes": "Technology stream is Sydney-only (no Melbourne tech intake). Business/finance streams for Sydney & Brisbane share the same deadline.",
-      "verified": "2026-07-10"
+      "notes": "Technology stream is Sydney-only (no Melbourne tech intake). Business/finance streams for Sydney & Brisbane share the same deadline. Applications closed 4 Aug 2026 (confirmed on official Macquarie careers page).",
+      "verified": "2026-08-22"
     },
     {
       "id": "nab-summer-2627",
@@ -82,7 +82,7 @@
       "program": "Summer Intern Program — Digital, Data & AI (Melbourne)",
       "roleType": "internship",
       "category": "bank",
-      "status": "open",
+      "status": "closed",
       "deadline": "2026-08-09",
       "deadlineNote": "11:59pm AEST",
       "locations": [
@@ -94,8 +94,8 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.nab.com.au/about-us/careers/early-careers/summer-intern-program",
-      "notes": "Opened 6 Jul. 'Digital, Data & AI' stream is Melbourne-only — the best tech/analytics fit. Business Banking also in Melbourne. Runs 23 Nov 2026 – 29 Jan 2027. Transcript required, GPA not scored.",
-      "verified": "2026-07-10"
+      "notes": "Opened 6 Jul. 'Digital, Data & AI' stream is Melbourne-only — the best tech/analytics fit. Business Banking also in Melbourne. Runs 23 Nov 2026 – 29 Jan 2027. Transcript required, GPA not scored. Applications closed 9 Aug 2026 per original deadline; cycle now closed.",
+      "verified": "2026-08-22"
     },
     {
       "id": "anz-tech-2627",
@@ -110,8 +110,8 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://careers.anz.com/job/Melbourne-202627-AU-Technology-Summer-Intern-program/1362774566/",
-      "notes": "Software Engineering, Cloud, Data & AI, Cyber. No published close date — ANZ shuts streams when full. Strongest pure-tech Melbourne fit.",
-      "verified": "2026-07-10"
+      "notes": "Software Engineering, Cloud, Data & AI, Cyber. Listing still live/active as of Aug 2026 — no published close date. ANZ has also opened a general 2026/27 Summer Intern 'Expression of Interest' listing on SEEK Grad, suggesting the direct stream may be filling; apply directly first, EOI as backup.",
+      "verified": "2026-08-22"
     },
     {
       "id": "anz-inst-2627",
@@ -128,8 +128,8 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://careers.anz.com/job/Melb%2C-Syd%2C-Bris-202627-AU-Institutional-Summer-Intern-program/1362775466/",
-      "notes": "Institutional banking stream, 8–10 weeks from Nov 2026. Rolling — apply early.",
-      "verified": "2026-07-10"
+      "notes": "Institutional banking stream, 8–10 weeks from Nov 2026. Listing still live/active as of Aug 2026 — rolling, no published close date. A general EOI listing for 2026/27 Summer Intern Program has also appeared on SEEK Grad as a fallback channel.",
+      "verified": "2026-08-22"
     },
     {
       "id": "kpmg-vac-2627",
@@ -282,7 +282,7 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.westpac.com.au/about-westpac/careers/pathways/grad-program/summer-intern/",
-      "notes": "Opens Mon 13 Jul 12pm AEST. Streams are markets/institutional; Corporate & Institutional Banking is the Melbourne option. Apply day one — likely fills fast.",
+      "notes": "Opens Mon 13 Jul 12pm AEST. Streams are markets/institutional; Corporate & Institutional Banking is the Melbourne option. Apply day one — likely fills fast. NOT RE-VERIFIED this pass (search limit reached) — this open date has now passed, re-check urgently.",
       "verified": "2026-07-10"
     },
     {
@@ -512,7 +512,7 @@
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://www.bain.com/careers/work-with-us/internships-programs/associate-consultant-internship/",
-      "notes": "Grad round closed. A ~31 Aug 2026 ACI deadline is cited but it's a global figure — verify AU applicability. Requires independently-held 3+ years of AU working rights.",
+      "notes": "Grad round closed. A ~31 Aug 2026 ACI deadline is cited but it's a global figure — verify AU applicability. Requires independently-held 3+ years of AU working rights. URGENT: this deadline is imminent — re-verify before relying on it.",
       "verified": "2026-07-10"
     },
     {
@@ -595,7 +595,7 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.westpac.com.au/about-westpac/careers/pathways/grad-program/",
-      "notes": "Opens the same day as the Summer Internship. Includes a Technology stream in the graduate intake — verify stream locations when applications open.",
+      "notes": "Opens the same day as the Summer Internship. Includes a Technology stream in the graduate intake — verify stream locations when applications open. NOT RE-VERIFIED this pass (search limit reached) — this open date has now passed, re-check urgently.",
       "verified": "2026-07-10"
     },
     {
