@@ -18,14 +18,13 @@ Stack
 
 How the data stays fresh
 
-A weekly GitHub Action (.github/workflows/refresh.yml) runs scripts/refresh.mjs, which asks Claude (with server-side web search) to re-verify every listing against official careers pages, close expired deadlines, and add newly opened programs. The script validates the result against the schema and the Action opens a PR — a human reviews the diff before merge, and merging auto-deploys.
+A weekly GitHub Action (.github/workflows/refresh.yml) runs scripts/refresh.mjs, which asks Claude (with server-side web search) to re-verify every listing against official careers pages, close expired deadlines, and add newly opened programs. The script validates the result against the schema (enum checks, https-only apply URLs, ISO dates, and a suspicious-shrink guard that fails the run rather than committing bad data). Valid data is committed straight to main, which auto-deploys via Vercel — fully hands-off, no PR to merge. Check the run's git history if you ever want to review or revert a week's changes.
 
 Setup for the refresh pipeline
 
 - Add an ANTHROPIC_API_KEY secret: repo Settings, Secrets and variables, Actions
-- Enable "Allow GitHub Actions to create and approve pull requests": repo Settings, Actions, General
 - Run it on demand from the Actions tab (workflow_dispatch), or wait for Tuesday's scheduled run
-- Note: GitHub disables scheduled workflows after 60 days without repo activity — merging the weekly PR keeps it alive
+- Note: GitHub disables scheduled workflows after 60 days without repo activity — the weekly commit to main keeps it alive on its own
 - Cost: roughly 30-60 cents per run on Sonnet 5 (each run prints its own estimated cost; set MODEL=claude-opus-4-8 for higher quality at higher cost)
 - Hard cap: set a workspace spend limit in the Anthropic Console (Settings, Limits) so the key can never overspend regardless of run frequency
 
