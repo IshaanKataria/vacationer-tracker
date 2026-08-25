@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-22",
+  "lastUpdated": "2026-08-25",
   "programs": [
     {
       "id": "macquarie-melb-2627",
@@ -110,8 +110,8 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://careers.anz.com/job/Melbourne-202627-AU-Technology-Summer-Intern-program/1362774566/",
-      "notes": "Software Engineering, Cloud, Data & AI, Cyber. Listing still live/active as of Aug 2026 — no published close date. ANZ has also opened a general 2026/27 Summer Intern 'Expression of Interest' listing on SEEK Grad, suggesting the direct stream may be filling; apply directly first, EOI as backup.",
-      "verified": "2026-08-22"
+      "notes": "Listing confirmed still live on careers.anz.com as of 25 Aug 2026, no published close date. Requires AU/NZ citizenship or PR, penultimate-year study. General 2026/27 Summer Intern 'Expression of Interest' listing remains available as a fallback channel.",
+      "verified": "2026-08-25"
     },
     {
       "id": "anz-inst-2627",
@@ -128,8 +128,8 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://careers.anz.com/job/Melb%2C-Syd%2C-Bris-202627-AU-Institutional-Summer-Intern-program/1362775466/",
-      "notes": "Institutional banking stream, 8–10 weeks from Nov 2026. Listing still live/active as of Aug 2026 — rolling, no published close date. A general EOI listing for 2026/27 Summer Intern Program has also appeared on SEEK Grad as a fallback channel.",
-      "verified": "2026-08-22"
+      "notes": "Listing confirmed still live on careers.anz.com as of 25 Aug 2026, no published close date. Requires AU/NZ citizenship or PR, penultimate-year study. General EOI listing for 2026/27 Summer Intern Program also remains live as a fallback channel.",
+      "verified": "2026-08-25"
     },
     {
       "id": "kpmg-vac-2627",
@@ -146,8 +146,8 @@
       "melbourne": true,
       "workRights": "visa-friendly",
       "applyUrl": "https://kpmg.com/au/en/careers/graduates/vacation-program.html",
-      "notes": "Main intake closed in April; rolling intake is live, reviewed as roles come up. 3–8 weeks from Nov 2026. Most visa-friendly Big 4 — needs 'full-time working rights', which a student visa gives over summer break.",
-      "verified": "2026-07-10"
+      "notes": "Confirmed still open via live 2026/27 KPMG Vacationer Program listings (Business, Consulting & Risk; Technology & Digital) on GradConnection/Prosple as of 25 Aug 2026. 3–8 week roles start Nov 2026. Most visa-friendly Big 4 — needs full-time working rights, which a student visa gives over summer break.",
+      "verified": "2026-08-25"
     },
     {
       "id": "ey-vac-2627",
@@ -164,8 +164,8 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.ey.com/en_au/careers/2026-27-vacationer-program-student-opportunities",
-      "notes": "Open, reviewed rolling — roles close when filled. Strictest Big 4 work-rights bar: AU/NZ citizen or AU PR only (separate First Nations program exists).",
-      "verified": "2026-07-10"
+      "notes": "Official EY page shows 'Apply now' as of 25 Aug 2026, open and reviewed rolling — roles close when filled. Strictest Big 4 work-rights bar: AU/NZ citizen or AU PR only (separate First Nations program exists).",
+      "verified": "2026-08-25"
     },
     {
       "id": "canva-intern-2627",
@@ -181,8 +181,8 @@
       "melbourne": false,
       "workRights": "visa-friendly",
       "applyUrl": "https://www.lifeatcanva.com/en/early-careers/",
-      "notes": "'Apply now' live. Not SWE-only — good fit for Commerce + IT profiles. No citizenship bar. Primary intern campus is Sydney; Melbourne office exists.",
-      "verified": "2026-07-10"
+      "notes": "Confirmed live as 'Internship Program (Dec 2026)' listing as of 25 Aug 2026 — not SWE-only, good fit for Commerce + IT profiles. No citizenship bar. Primary intern campus is Sydney; Melbourne office exists.",
+      "verified": "2026-08-25"
     },
     {
       "id": "amazon-sde-2026",
@@ -197,8 +197,8 @@
       "melbourne": false,
       "workRights": "visa-friendly",
       "applyUrl": "https://www.amazon.jobs/en/jobs/3204846/2026-software-dev-engineer-intern-location-sydney",
-      "notes": "Live apply button. Penultimate-year CS/IT, Dec 2026 – Feb 2027. No citizenship bar. Online assessment lands fast after applying — apply when you can turn it around.",
-      "verified": "2026-07-10"
+      "notes": "Listing (Job ID 3204846) confirmed still live on amazon.jobs as of 25 Aug 2026. Penultimate-year CS/IT, Dec 2026 – Feb 2027. No citizenship bar. Online assessment lands fast after applying — apply when you can turn it around.",
+      "verified": "2026-08-25"
     },
     {
       "id": "sig-qt-2627",
@@ -214,7 +214,7 @@
       "melbourne": false,
       "workRights": "sponsors-visa",
       "applyUrl": "https://careers.sig.com/apac/jobs",
-      "notes": "Recruits AU students from Sydney with visa sponsorship for the HK placement. Sept 2026 Sydney 'Discovery Program' insight event also worth grabbing.",
+      "notes": "Recruits AU students from Sydney with visa sponsorship for the HK placement. Sept 2026 Sydney 'Discovery Program' insight event also worth grabbing. NOT RE-VERIFIED this pass (search budget exhausted) — re-check before relying on it.",
       "verified": "2026-07-10"
     },
     {
@@ -230,7 +230,7 @@
       "melbourne": false,
       "workRights": "sponsors-visa",
       "applyUrl": "https://www.janestreet.com/join-jane-street/open-roles/",
-      "notes": "Summer 2027 HK cycle opening now, rolling — earliest applicants get the least-contested interview slots. Flights + accommodation covered, HK relocation/visa handled. Targets grads of 2028/2029.",
+      "notes": "Summer 2027 HK cycle opening now, rolling — earliest applicants get the least-contested interview slots. Flights + accommodation covered, HK relocation/visa handled. Targets grads of 2028/2029. NOT RE-VERIFIED this pass (search budget exhausted) — re-check before relying on it.",
       "verified": "2026-07-10"
     },
     {
@@ -246,7 +246,7 @@
       "melbourne": false,
       "workRights": "role-dependent",
       "applyUrl": "https://www.citadelsecurities.com/careers/details/expression-of-interest-intern-australia/",
-      "notes": "Submit the EOI to be contacted when formal apps open. Register for 'Discover Citadel Securities' Sydney (~early Sept 2026). Citadel fund and Citadel Securities are separate pipelines — apply to both.",
+      "notes": "Submit the EOI to be contacted when formal apps open. Register for 'Discover Citadel Securities' Sydney (~early Sept 2026). Citadel fund and Citadel Securities are separate pipelines — apply to both. NOT RE-VERIFIED this pass (search budget exhausted) — re-check before relying on it.",
       "verified": "2026-07-10"
     },
     {
@@ -263,7 +263,7 @@
       "melbourne": false,
       "workRights": "visa-friendly",
       "applyUrl": "https://optiver.com/working-at-optiver/internships/",
-      "notes": "Join the Talent Community / EOI now to be pinged when the 2027-cycle reqs open (~Aug). Accepts full AU working rights. Interns get stipend + furnished housing + flights.",
+      "notes": "Join the Talent Community / EOI now to be pinged when the 2027-cycle reqs open (~Aug). Accepts full AU working rights. Interns get stipend + furnished housing + flights. NOT RE-VERIFIED this pass (search budget exhausted) — re-check whether formal reqs have opened.",
       "verified": "2026-07-10"
     },
     {
@@ -282,7 +282,7 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.westpac.com.au/about-westpac/careers/pathways/grad-program/summer-intern/",
-      "notes": "Opens Mon 13 Jul 12pm AEST. Streams are markets/institutional; Corporate & Institutional Banking is the Melbourne option. Apply day one — likely fills fast. NOT RE-VERIFIED this pass (search limit reached) — this open date has now passed, re-check urgently.",
+      "notes": "Opens Mon 13 Jul 12pm AEST. Streams are markets/institutional; Corporate & Institutional Banking is the Melbourne option. Apply day one — likely fills fast. NOT RE-VERIFIED this pass (search budget exhausted) — this open date has now passed, re-check urgently.",
       "verified": "2026-07-10"
     },
     {
@@ -300,7 +300,7 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.commbank.com.au/about-us/careers/graduate-intern-programs.html",
-      "notes": "Official page says applications open 'July to August'. Melbourne tech streams: Engineering, Data Science & AI, Cyber (70 WAM for tech). Watch and apply the day it flips open.",
+      "notes": "Official page says applications open 'July to August'. Melbourne tech streams: Engineering, Data Science & AI, Cyber (70 WAM for tech). NOT RE-VERIFIED this pass (search budget exhausted) — window may have opened/closed, re-check urgently.",
       "verified": "2026-07-10"
     },
     {
@@ -317,7 +317,7 @@
       "melbourne": false,
       "workRights": "role-dependent",
       "applyUrl": "https://careers.microsoft.com/students/",
-      "notes": "2027 season typically opens Aug–Oct. AU intern roles are Sydney-based. No hard citizenship bar. Check weekly from August.",
+      "notes": "2027 season typically opens Aug–Oct. AU intern roles are Sydney-based. No hard citizenship bar. NOT RE-VERIFIED this pass (search budget exhausted) — check weekly from August.",
       "verified": "2026-07-10"
     },
     {
@@ -334,7 +334,7 @@
       "melbourne": false,
       "workRights": "role-dependent",
       "applyUrl": "https://akunacapital.com/work-with-us/internships/",
-      "notes": "Summer 2027 (Dec 2026 Sydney intake) typically opens ~Aug–Sept. SWE / Quant Research / Trading; no prior finance experience required.",
+      "notes": "Summer 2027 (Dec 2026 Sydney intake) typically opens ~Aug–Sept. SWE / Quant Research / Trading; no prior finance experience required. NOT RE-VERIFIED this pass (search budget exhausted) — re-check whether applications have opened.",
       "verified": "2026-07-10"
     },
     {
@@ -352,7 +352,7 @@
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://au.gradconnection.com/employers/rea-group/",
-      "notes": "Melbourne-headquartered, #1 small-program grad employer 2026. STEM summer internship on an early-year cycle — currently between rounds. Set a GradConnection alert.",
+      "notes": "Melbourne-headquartered, #1 small-program grad employer 2026. STEM summer internship on an early-year cycle — currently between rounds. NOT RE-VERIFIED this pass (search budget exhausted).",
       "verified": "2026-07-10"
     },
     {
@@ -370,7 +370,7 @@
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://au.gradconnection.com/employers/accenture/",
-      "notes": "Runs intake waves ~March and ~September. A few early-career roles were showing open on GradConnection — check which, and watch for the September wave.",
+      "notes": "Runs intake waves ~March and ~September. A few early-career roles were showing open on GradConnection — check which, and watch for the September wave. NOT RE-VERIFIED this pass (search budget exhausted).",
       "verified": "2026-07-10"
     },
     {
@@ -388,7 +388,7 @@
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://www.kearney.com/about/locations/anz/careers",
-      "notes": "Offers both summer and winter internships in Sydney and Melbourne, 6–10 weeks, penultimate-friendly, all disciplines. Current intake status unconfirmed — verify on the page.",
+      "notes": "Offers both summer and winter internships in Sydney and Melbourne, 6–10 weeks, penultimate-friendly, all disciplines. Current intake status unconfirmed — verify on the page. NOT RE-VERIFIED this pass (search budget exhausted).",
       "verified": "2026-07-10"
     },
     {
@@ -405,7 +405,7 @@
       "melbourne": true,
       "workRights": "visa-friendly",
       "applyUrl": "https://jobs-au.pwc.com/au/en/vacation-program",
-      "notes": "Applications closed for this cycle. Student-visa friendly when open (full working rights, no sponsorship). Register interest for the next round.",
+      "notes": "Applications closed for this cycle. Student-visa friendly when open (full working rights, no sponsorship). Register interest for the next round. NOT RE-VERIFIED this pass (search budget exhausted) — next-round opening unconfirmed.",
       "verified": "2026-07-10"
     },
     {
@@ -422,7 +422,7 @@
       "melbourne": false,
       "workRights": "role-dependent",
       "applyUrl": "https://www.imc.com/ap/careers/students-graduates/internships",
-      "notes": "Official listing shows no open roles for the Nov 2026 intake (ignore stale 'open' counts on job boards). Set an alert for the next cycle.",
+      "notes": "Official listing shows no open roles for the Nov 2026 intake (ignore stale 'open' counts on job boards). Set an alert for the next cycle. NOT RE-VERIFIED this pass (search budget exhausted).",
       "verified": "2026-07-10"
     },
     {
@@ -439,7 +439,7 @@
       "melbourne": false,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.atlassian.com/company/careers/earlycareers",
-      "notes": "Closed 27 Apr. Sydney only, AU/NZ citizen or PR only. Reopens ~Jan — set an alert on the early-careers hub.",
+      "notes": "Closed 27 Apr. Sydney only, AU/NZ citizen or PR only. Reopens ~Jan — set an alert on the early-careers hub. NOT RE-VERIFIED this pass (search budget exhausted).",
       "verified": "2026-07-10"
     },
     {
@@ -456,7 +456,7 @@
       "melbourne": false,
       "workRights": "visa-friendly",
       "applyUrl": "https://au.gradconnection.com/employers/google/",
-      "notes": "AU summer intakes open early and close mid-year; the Nov 2026 cohort has likely closed (unconfirmed). No citizenship bar. Watch for the next AU intake.",
+      "notes": "AU summer intakes open early and close mid-year; the Nov 2026 cohort has likely closed (unconfirmed). No citizenship bar. Watch for the next AU intake. NOT RE-VERIFIED this pass (search budget exhausted).",
       "verified": "2026-07-10"
     },
     {
@@ -512,7 +512,7 @@
       "melbourne": true,
       "workRights": "role-dependent",
       "applyUrl": "https://www.bain.com/careers/work-with-us/internships-programs/associate-consultant-internship/",
-      "notes": "Grad round closed. A ~31 Aug 2026 ACI deadline is cited but it's a global figure — verify AU applicability. Requires independently-held 3+ years of AU working rights. URGENT: this deadline is imminent — re-verify before relying on it.",
+      "notes": "Grad round closed. A ~31 Aug 2026 ACI deadline is cited but it's a global figure — verify AU applicability. Requires independently-held 3+ years of AU working rights. URGENT: this deadline is imminent and could NOT be re-verified this pass (search budget exhausted) — check immediately.",
       "verified": "2026-07-10"
     },
     {
@@ -544,7 +544,7 @@
       "melbourne": false,
       "workRights": "visa-friendly",
       "applyUrl": "https://www.optiver.com/join-us/jobs/institutional-sales-and-trading/sydney/expressions-of-interest-graduate-quantitative-trader-2027/",
-      "notes": "Formal graduate applications are currently closed — the EOI is open and Optiver contacts registrants when the campaign opens. Accepts full AU working rights.",
+      "notes": "Formal graduate applications are currently closed — the EOI is open and Optiver contacts registrants when the campaign opens. Accepts full AU working rights. NOT RE-VERIFIED this pass (search budget exhausted).",
       "verified": "2026-07-10"
     },
     {
@@ -560,7 +560,7 @@
       "melbourne": false,
       "workRights": "role-dependent",
       "applyUrl": "https://careers.sig.com/apac/jobs",
-      "notes": "Live on the APAC jobs board, reviewed rolling. Reach it via the board search — direct job deep-links do not resolve.",
+      "notes": "Live on the APAC jobs board, reviewed rolling. Reach it via the board search — direct job deep-links do not resolve. NOT RE-VERIFIED this pass (search budget exhausted).",
       "verified": "2026-07-10"
     },
     {
@@ -576,7 +576,7 @@
       "melbourne": false,
       "workRights": "citizen-pr",
       "applyUrl": "https://cba.wd3.myworkdayjobs.com/Private_Ad/job/Sydney-CBD-Area/Technology-Associate-Program--Traineeship-_REQ260472-2",
-      "notes": "12-18 month technology traineeship, separate from the Summer Intern Program. Listing was live with no published close date — apply early.",
+      "notes": "12-18 month technology traineeship, separate from the Summer Intern Program. Listing was live with no published close date — apply early. NOT RE-VERIFIED this pass (search budget exhausted).",
       "verified": "2026-07-10"
     },
     {
@@ -595,7 +595,7 @@
       "melbourne": true,
       "workRights": "citizen-pr",
       "applyUrl": "https://www.westpac.com.au/about-westpac/careers/pathways/grad-program/",
-      "notes": "Opens the same day as the Summer Internship. Includes a Technology stream in the graduate intake — verify stream locations when applications open. NOT RE-VERIFIED this pass (search limit reached) — this open date has now passed, re-check urgently.",
+      "notes": "Opens the same day as the Summer Internship. Includes a Technology stream in the graduate intake — verify stream locations when applications open. NOT RE-VERIFIED this pass (search budget exhausted) — this open date has now passed, re-check urgently.",
       "verified": "2026-07-10"
     },
     {
@@ -613,7 +613,7 @@
       "melbourne": false,
       "workRights": "visa-friendly",
       "applyUrl": "https://www.lifeatcanva.com/en/early-careers/",
-      "notes": "Final-year focus. Was on expressions-of-interest with opening flagged as weeks away — watch the early-careers page.",
+      "notes": "Final-year focus. Was on expressions-of-interest with opening flagged as weeks away — watch the early-careers page. NOT RE-VERIFIED this pass (search budget exhausted) — expected open window has now passed, re-check urgently.",
       "verified": "2026-07-10"
     },
     {
